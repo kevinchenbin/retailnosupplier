@@ -1,0 +1,132 @@
+object frmmemberorder: Tfrmmemberorder
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = #20250#21592#35746#38405#26597#35810
+  ClientHeight = 722
+  ClientWidth = 1022
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object rztlbr1: TRzToolbar
+    Left = 0
+    Top = 0
+    Width = 1022
+    Height = 36
+    AutoResize = False
+    AutoStyle = False
+    TopMargin = 6
+    ButtonWidth = 60
+    ShowButtonCaptions = True
+    TextOptions = ttoSelectiveTextOnRight
+    BorderInner = fsFlatRounded
+    BorderOuter = fsNone
+    BorderSides = [sdTop, sdBottom]
+    BorderWidth = 0
+    Color = 16113353
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = #24494#36719#38597#40657
+    Font.Style = []
+    GradientColorStyle = gcsMSOffice
+    ParentFont = False
+    TabOrder = 0
+    VisualStyle = vsClassic
+    ExplicitWidth = 1012
+    ToolbarControls = (
+      tlbtnQry
+      tlbtnExport
+      BtnAlignBottom
+      tlbtnExit)
+    object tlbtnQry: TRzToolButton
+      Left = 4
+      Top = 0
+      Width = 60
+      Height = 36
+      GradientColorStyle = gcsSystem
+      ImageIndex = 0
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #26597#35810#13'(&F)'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      ParentFont = False
+    end
+    object tlbtnExport: TRzToolButton
+      Left = 64
+      Top = 0
+      Width = 60
+      Height = 36
+      GradientColorStyle = gcsSystem
+      ImageIndex = 2
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #23548#20986#13'[F6]'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      ParentFont = False
+    end
+    object tlbtnExit: TRzToolButton
+      Left = 184
+      Top = 0
+      Width = 60
+      Height = 36
+      GradientColorStyle = gcsSystem
+      ImageIndex = 4
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #36864#20986#13'(&Q)'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      ParentFont = False
+      OnClick = tlbtnExitClick
+    end
+    object BtnAlignBottom: TRzToolButton
+      Left = 124
+      Top = 0
+      Width = 60
+      Height = 36
+      Hint = 'Align Bottom'
+      DisabledIndex = 7
+      GradientColorStyle = gcsSystem
+      ImageIndex = 6
+      UseToolbarButtonSize = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #26368#23567#21270#13'(&N)'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      ParentFont = False
+      OnClick = BtnAlignBottomClick
+    end
+  end
+end

@@ -1,0 +1,48 @@
+//---------------------------------------------------------------------------
+
+#ifndef UniteachermanagerH
+#define UniteachermanagerH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include "RzButton.hpp"
+#include "RzPanel.hpp"
+#include <ADODB.hpp>
+#include <DB.hpp>
+#include <DBGrids.hpp>
+#include <ExtCtrls.hpp>
+#include <Grids.hpp>
+#include "Unitteacher.h"
+#include "DBGridEh.hpp"
+#include "GridsEh.hpp"
+//---------------------------------------------------------------------------
+class Tfrmteachermanager : public TForm
+{
+__published:	// IDE-managed Components
+	TDBGrid *dbgrid;
+	TRzToolbar *RzToolbar1;
+	TRzToolButton *BtnExit;
+	TRzToolButton *Btn;
+	TRzToolButton *RzToolButton1;
+	TRzToolButton *RzToolButton2;
+	TADOQuery *adoteacher;
+	TDataSource *DataSource1;
+	TDBGridEh *DBGridEh1;
+	void __fastcall FormShow(TObject *Sender);
+	void __fastcall BtnClick(TObject *Sender);
+	void __fastcall BtnExitClick(TObject *Sender);
+	void __fastcall RzToolButton1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+
+TADOConnection *Acon;
+	void updatedata();
+	void teachermanager(TADOQuery *adoteacher,int atype);
+	__fastcall Tfrmteachermanager(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tfrmteachermanager *frmteachermanager;
+//---------------------------------------------------------------------------
+#endif

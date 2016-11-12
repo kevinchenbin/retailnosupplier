@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------
+
+#ifndef UnitshengdaicaigouH
+#define UnitshengdaicaigouH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+//---------------------------------------------------------------------------
+class Tfrmshengdaicaigou : public TForm
+{
+__published:	// IDE-managed Components
+private:	// User declarations
+public:		// User declarations
+	__fastcall Tfrmshengdaicaigou(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE Tfrmshengdaicaigou *frmshengdaicaigou;
+//---------------------------------------------------------------------------
+#endif

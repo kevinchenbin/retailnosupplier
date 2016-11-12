@@ -1,0 +1,297 @@
+object frmteachermanager: Tfrmteachermanager
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = #25945#24072#31649#29702
+  ClientHeight = 403
+  ClientWidth = 820
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgrid: TDBGrid
+    Left = 0
+    Top = 114
+    Width = 793
+    Height = 348
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = #24494#36719#38597#40657
+    Font.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    OnDblClick = BtnExitClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Title.Alignment = taCenter
+        Title.Caption = #24207#21495
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -14
+        Title.Font.Name = #24494#36719#38597#40657
+        Title.Font.Style = []
+        Width = 30
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Name'
+        Title.Alignment = taCenter
+        Title.Caption = #22995#21517
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -14
+        Title.Font.Name = #24494#36719#38597#40657
+        Title.Font.Style = []
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'tel'
+        Title.Alignment = taCenter
+        Title.Caption = #30005#35805
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -14
+        Title.Font.Name = #24494#36719#38597#40657
+        Title.Font.Style = []
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'mob'
+        Title.Alignment = taCenter
+        Title.Caption = #25163#26426#21495
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -14
+        Title.Font.Name = #24494#36719#38597#40657
+        Title.Font.Style = []
+        Width = 80
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'class'
+        Title.Alignment = taCenter
+        Title.Caption = #29677#32423
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -14
+        Title.Font.Name = #24494#36719#38597#40657
+        Title.Font.Style = []
+        Width = 140
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'address'
+        Title.Alignment = taCenter
+        Title.Caption = #22320#22336
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -14
+        Title.Font.Name = #24494#36719#38597#40657
+        Title.Font.Style = []
+        Width = 160
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'bk'
+        Title.Alignment = taCenter
+        Title.Caption = #22791#27880
+        Title.Font.Charset = ANSI_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -14
+        Title.Font.Name = #24494#36719#38597#40657
+        Title.Font.Style = []
+        Width = 150
+        Visible = True
+      end>
+  end
+  object RzToolbar1: TRzToolbar
+    Left = 0
+    Top = 0
+    Width = 820
+    Height = 36
+    AutoResize = False
+    AutoStyle = False
+    TopMargin = 6
+    ButtonWidth = 60
+    ShowButtonCaptions = True
+    TextOptions = ttoSelectiveTextOnRight
+    BorderColor = clSkyBlue
+    BorderInner = fsFlatRounded
+    BorderOuter = fsNone
+    BorderSides = [sdTop, sdBottom]
+    BorderWidth = 0
+    Color = 16113353
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = #24494#36719#38597#40657
+    Font.Style = []
+    GradientColorStyle = gcsCustom
+    ParentFont = False
+    TabOrder = 1
+    VisualStyle = vsClassic
+    ToolbarControls = (
+      Btn
+      BtnExit
+      RzToolButton1
+      RzToolButton2)
+    object BtnExit: TRzToolButton
+      Left = 64
+      Top = 0
+      Width = 60
+      Height = 36
+      Hint = 'Exit'
+      DisabledIndex = 3
+      GradientColorStyle = gcsSystem
+      ImageIndex = 2
+      UseToolbarButtonSize = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #20462#25913#13'(&M)'
+      OnClick = BtnExitClick
+    end
+    object Btn: TRzToolButton
+      Left = 4
+      Top = 0
+      Width = 60
+      Height = 36
+      DisabledIndex = 5
+      GradientColorStyle = gcsSystem
+      ImageIndex = 4
+      UseToolbarButtonSize = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #22686#21152#13'(&A)'
+      OnClick = BtnClick
+    end
+    object RzToolButton1: TRzToolButton
+      Left = 124
+      Top = 0
+      Width = 60
+      Height = 36
+      Hint = 'Exit'
+      DisabledIndex = 3
+      GradientColorStyle = gcsSystem
+      ImageIndex = 2
+      UseToolbarButtonSize = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #21024#38500#13'(&D)'
+      OnClick = RzToolButton1Click
+    end
+    object RzToolButton2: TRzToolButton
+      Left = 184
+      Top = 0
+      Width = 60
+      Height = 36
+      Hint = 'Exit'
+      DisabledIndex = 3
+      GradientColorStyle = gcsSystem
+      ImageIndex = 2
+      UseToolbarButtonSize = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #36864#20986#13'(&Q)'
+    end
+  end
+  object DBGridEh1: TDBGridEh
+    Left = 24
+    Top = 42
+    Width = 745
+    Height = 120
+    Flat = True
+    FooterColor = clWindow
+    FooterFont.Charset = DEFAULT_CHARSET
+    FooterFont.Color = clWindowText
+    FooterFont.Height = -11
+    FooterFont.Name = 'Tahoma'
+    FooterFont.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 2
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        EditButtons = <>
+        FieldName = 'id'
+        Footers = <>
+      end
+      item
+        EditButtons = <>
+        FieldName = 'name'
+        Footers = <>
+      end
+      item
+        EditButtons = <>
+        FieldName = 'tel'
+        Footers = <>
+      end
+      item
+        EditButtons = <>
+        FieldName = 'mob'
+        Footers = <>
+      end
+      item
+        EditButtons = <>
+        FieldName = 'class'
+        Footers = <>
+      end
+      item
+        EditButtons = <>
+        FieldName = 'address'
+        Footers = <>
+      end
+      item
+        EditButtons = <>
+        FieldName = 'address'
+        Footers = <>
+      end
+      item
+        EditButtons = <>
+        FieldName = 'bk'
+        Footers = <>
+      end>
+  end
+  object adoteacher: TADOQuery
+    CursorLocation = clUseServer
+    Parameters = <>
+    SQL.Strings = (
+      'select * from dbo.Teacher')
+    Left = 264
+    Top = 184
+  end
+  object DataSource1: TDataSource
+    AutoEdit = False
+    DataSet = adoteacher
+    Left = 128
+    Top = 248
+  end
+end

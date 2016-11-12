@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "UnitMemberOrder.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "RzButton"
+#pragma link "RzPanel"
+#pragma resource "*.dfm"
+Tfrmmemberorder *frmmemberorder;
+//---------------------------------------------------------------------------
+__fastcall Tfrmmemberorder::Tfrmmemberorder(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall Tfrmmemberorder::tlbtnExitClick(TObject *Sender)
+{
+  close();
+}
+//---------------------------------------------------------------------------

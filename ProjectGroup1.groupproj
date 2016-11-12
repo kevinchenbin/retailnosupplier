@@ -1,0 +1,108 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{74DE5286-76F9-451A-BA51-C4BD26CB456D}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="book.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bsadmin\bsadmin.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="catalogadmin\catalogadmin.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="marketadmin\marketadmin.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="sysadmin\sysadmin.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="dataanalysis\dataanalysis.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bsquery\bsquery.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="book">
+			<MSBuild Projects="book.cbproj"/>
+		</Target>
+		<Target Name="book:Clean">
+			<MSBuild Targets="Clean" Projects="book.cbproj"/>
+		</Target>
+		<Target Name="book:Make">
+			<MSBuild Targets="Make" Projects="book.cbproj"/>
+		</Target>
+		<Target Name="bsadmin">
+			<MSBuild Projects="bsadmin\bsadmin.cbproj"/>
+		</Target>
+		<Target Name="bsadmin:Clean">
+			<MSBuild Targets="Clean" Projects="bsadmin\bsadmin.cbproj"/>
+		</Target>
+		<Target Name="bsadmin:Make">
+			<MSBuild Targets="Make" Projects="bsadmin\bsadmin.cbproj"/>
+		</Target>
+		<Target Name="catalogadmin">
+			<MSBuild Projects="catalogadmin\catalogadmin.cbproj"/>
+		</Target>
+		<Target Name="catalogadmin:Clean">
+			<MSBuild Targets="Clean" Projects="catalogadmin\catalogadmin.cbproj"/>
+		</Target>
+		<Target Name="catalogadmin:Make">
+			<MSBuild Targets="Make" Projects="catalogadmin\catalogadmin.cbproj"/>
+		</Target>
+		<Target Name="marketadmin">
+			<MSBuild Projects="marketadmin\marketadmin.cbproj"/>
+		</Target>
+		<Target Name="marketadmin:Clean">
+			<MSBuild Targets="Clean" Projects="marketadmin\marketadmin.cbproj"/>
+		</Target>
+		<Target Name="marketadmin:Make">
+			<MSBuild Targets="Make" Projects="marketadmin\marketadmin.cbproj"/>
+		</Target>
+		<Target Name="sysadmin">
+			<MSBuild Projects="sysadmin\sysadmin.cbproj"/>
+		</Target>
+		<Target Name="sysadmin:Clean">
+			<MSBuild Targets="Clean" Projects="sysadmin\sysadmin.cbproj"/>
+		</Target>
+		<Target Name="sysadmin:Make">
+			<MSBuild Targets="Make" Projects="sysadmin\sysadmin.cbproj"/>
+		</Target>
+		<Target Name="dataanalysis">
+			<MSBuild Projects="dataanalysis\dataanalysis.cbproj"/>
+		</Target>
+		<Target Name="dataanalysis:Clean">
+			<MSBuild Targets="Clean" Projects="dataanalysis\dataanalysis.cbproj"/>
+		</Target>
+		<Target Name="dataanalysis:Make">
+			<MSBuild Targets="Make" Projects="dataanalysis\dataanalysis.cbproj"/>
+		</Target>
+		<Target Name="bsquery">
+			<MSBuild Projects="bsquery\bsquery.cbproj"/>
+		</Target>
+		<Target Name="bsquery:Clean">
+			<MSBuild Targets="Clean" Projects="bsquery\bsquery.cbproj"/>
+		</Target>
+		<Target Name="bsquery:Make">
+			<MSBuild Targets="Make" Projects="bsquery\bsquery.cbproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="book;bsadmin;catalogadmin;marketadmin;sysadmin;dataanalysis;bsquery"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="book:Clean;bsadmin:Clean;catalogadmin:Clean;marketadmin:Clean;sysadmin:Clean;dataanalysis:Clean;bsquery:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="book:Make;bsadmin:Make;catalogadmin:Make;marketadmin:Make;sysadmin:Make;dataanalysis:Make;bsquery:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

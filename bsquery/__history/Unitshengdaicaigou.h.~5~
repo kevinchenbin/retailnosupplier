@@ -1,0 +1,41 @@
+//---------------------------------------------------------------------------
+
+#ifndef UnitshengdaicaigouH
+#define UnitshengdaicaigouH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include "DBGridEh.hpp"
+#include "GridsEh.hpp"
+#include "QryProcureNoteForm.h"
+#include "RzButton.hpp"
+#include "RzDBCmbo.hpp"
+#include "RzDTP.hpp"
+#include "RzEdit.hpp"
+#include "RzPanel.hpp"
+#include "RzRadChk.hpp"
+#include "RzTabs.hpp"
+#include <ADODB.hpp>
+#include <Buttons.hpp>
+#include <ComCtrls.hpp>
+#include <DB.hpp>
+#include <DBCtrls.hpp>
+#include <Dialogs.hpp>
+#include <ExtCtrls.hpp>
+#include <ImgList.hpp>
+#include <Mask.hpp>
+#include <Menus.hpp>
+//---------------------------------------------------------------------------
+class TfrmQryProcureNote1 : public TfrmQryProcureNote
+{
+__published:	// IDE-managed Components
+private:	// User declarations
+public:		// User declarations
+	__fastcall TfrmQryProcureNote1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TfrmQryProcureNote1 *frmQryProcureNote1;
+//---------------------------------------------------------------------------
+#endif

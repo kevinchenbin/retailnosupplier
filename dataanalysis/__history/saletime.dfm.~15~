@@ -1,0 +1,502 @@
+object frmsaletime: Tfrmsaletime
+  Left = 0
+  Top = 0
+  Caption = #38144#21806#26102#27573#27719#24635#32479#35745
+  ClientHeight = 712
+  ClientWidth = 1012
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = #24494#36719#38597#40657
+  Font.Style = []
+  FormStyle = fsMDIChild
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  Visible = True
+  WindowState = wsMaximized
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  TextHeight = 17
+  object RzToolbar1: TRzToolbar
+    Left = 0
+    Top = 0
+    Width = 1012
+    Height = 36
+    AutoResize = False
+    AutoStyle = False
+    TopMargin = 6
+    BorderInner = fsFlatRounded
+    BorderOuter = fsNone
+    BorderSides = [sdTop, sdBottom]
+    BorderWidth = 0
+    Color = 16113353
+    GradientColorStyle = gcsMSOffice
+    TabOrder = 0
+    VisualStyle = vsClassic
+    ToolbarControls = (
+      BtnView
+      BtnExport
+      BtnPrint
+      BtnAlignBottom
+      BtnExit)
+    object BtnView: TRzToolButton
+      Left = 4
+      Top = 0
+      Width = 55
+      Height = 36
+      Hint = 'View'
+      DisabledIndex = 1
+      GradientColorStyle = gcsSystem
+      ImageIndex = 0
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #26597#35810#13'[F1]'
+      OnClick = BtnViewClick
+    end
+    object BtnExport: TRzToolButton
+      Left = 59
+      Top = 0
+      Width = 55
+      Height = 36
+      Hint = 'Export'
+      DisabledIndex = 3
+      GradientColorStyle = gcsSystem
+      ImageIndex = 2
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #23548#20986#13'[F8]'
+      OnClick = BtnExportClick
+    end
+    object BtnExit: TRzToolButton
+      Left = 224
+      Top = 0
+      Width = 55
+      Height = 36
+      Hint = 'Exit'
+      DisabledIndex = 5
+      GradientColorStyle = gcsSystem
+      ImageIndex = 4
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #36864#20986#13'(&Q)'
+      OnClick = BtnExitClick
+    end
+    object BtnPrint: TRzToolButton
+      Left = 114
+      Top = 0
+      Width = 55
+      Height = 36
+      Hint = 'Print'
+      DisabledIndex = 7
+      GradientColorStyle = gcsSystem
+      ImageIndex = 6
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #25171#21360#13'[F10]'
+      Visible = False
+    end
+    object BtnAlignBottom: TRzToolButton
+      Left = 169
+      Top = 0
+      Width = 55
+      Height = 36
+      Hint = 'Align Bottom'
+      DisabledIndex = 9
+      GradientColorStyle = gcsSystem
+      ImageIndex = 8
+      ShowCaption = True
+      UseToolbarButtonSize = False
+      UseToolbarShowCaption = False
+      UseToolbarVisualStyle = False
+      VisualStyle = vsGradient
+      Caption = #26368#23567#21270#13'(&N)'
+      OnClick = BtnAlignBottomClick
+    end
+  end
+  object dg: TDBGridEh
+    Left = 0
+    Top = 91
+    Width = 961
+    Height = 608
+    ParentCustomHint = False
+    AllowedOperations = []
+    BiDiMode = bdLeftToRight
+    Ctl3D = True
+    DataSource = ds
+    Flat = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = #24494#36719#38597#40657
+    Font.Style = []
+    FooterColor = clWindow
+    FooterFont.Charset = ANSI_CHARSET
+    FooterFont.Color = clNavy
+    FooterFont.Height = -12
+    FooterFont.Name = #24494#36719#38597#40657
+    FooterFont.Style = []
+    FooterRowCount = 1
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    ParentBiDiMode = False
+    ParentCtl3D = False
+    ParentFont = False
+    ParentShowHint = False
+    ShowHint = False
+    SumList.Active = True
+    TabOrder = 1
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clNavy
+    TitleFont.Height = -12
+    TitleFont.Name = #24494#36719#38597#40657
+    TitleFont.Style = []
+    Columns = <
+      item
+        EditButtons = <>
+        FieldName = 'storagename'
+        Footer.Value = #21512#35745
+        Footer.ValueType = fvtStaticText
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #24215#21517
+        Width = 120
+      end
+      item
+        EditButtons = <>
+        FieldName = 'lsTotalAmount'
+        Footer.FieldName = 'lsTotalAmount'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #38646#21806#25968#37327
+        Width = 50
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'lsFixedPrice'
+        Footer.FieldName = 'lsFixedPrice'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #38646#21806#30721#27915
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'lsDiscountedPrice'
+        Footer.FieldName = 'lsDiscountedPrice'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #38646#21806#23454#27915
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'lsCbprice'
+        Footer.FieldName = 'lsCbprice'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #38646#21806#25104#26412
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'lsprofite'
+        Footer.FieldName = 'lsprofite'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #38646#21806#27611#21033
+        Width = 65
+      end
+      item
+        EditButtons = <>
+        FieldName = 'wsTotalAmount'
+        Footer.FieldName = 'wsTotalAmount'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #21457#36135#25968#37327
+        Width = 50
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'wsFixedPrice'
+        Footer.FieldName = 'wsFixedPrice'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #21457#36135#30721#27915
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'wsDiscountedPrice'
+        Footer.FieldName = 'wsDiscountedPrice'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #21457#36135#23454#27915
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'wsCbprice'
+        Footer.FieldName = 'wsCbprice'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #21457#36135#25104#26412
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'wsprofite'
+        Footer.FieldName = 'wsprofite'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #21457#36135#27611#21033
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'Checked'
+        Footer.FieldName = 'Checked'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #24050#32467
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'Nochecked'
+        Footer.FieldName = 'Nochecked'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #26410#32467
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'totalcbprice'
+        Footer.FieldName = 'totalcbprice'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #24635#25104#26412
+        Width = 65
+      end
+      item
+        DisplayFormat = #65509'###,###,##0.00'
+        EditButtons = <>
+        FieldName = 'totalprofite'
+        Footer.FieldName = 'totalprofite'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #24635#27611#21033
+        Width = 65
+      end
+      item
+        EditButtons = <>
+        FieldName = 'yinshou'
+        Footer.ValueType = fvtSum
+        Footers = <>
+        Title.Alignment = taCenter
+        Title.Caption = #24212#25910
+        Width = 65
+      end>
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 40
+    Width = 1012
+    Height = 50
+    Ctl3D = True
+    ParentCtl3D = False
+    TabOrder = 2
+    object SpeedButton1: TSpeedButton
+      Left = 704
+      Top = 15
+      Width = 105
+      Height = 30
+      Caption = #25171#21360#38144#21806#27719#24635
+    end
+    object dtpstart: TDateTimePicker
+      Left = 84
+      Top = 14
+      Width = 149
+      Height = 25
+      Date = 40093.449149120370000000
+      Time = 40093.449149120370000000
+      TabOrder = 0
+      OnChange = dtpstartChange
+    end
+    object dtpend: TDateTimePicker
+      Left = 340
+      Top = 14
+      Width = 149
+      Height = 25
+      Date = 40093.449270648150000000
+      Time = 40093.449270648150000000
+      TabOrder = 1
+      OnChange = dtpendChange
+    end
+    object cbend: TRzCheckBox
+      Left = 266
+      Top = 18
+      Width = 67
+      Height = 19
+      Caption = #32467#26463#26102#38388
+      State = cbUnchecked
+      TabOrder = 2
+    end
+    object cbstart: TRzCheckBox
+      Left = 11
+      Top = 18
+      Width = 67
+      Height = 19
+      Caption = #24320#22987#26102#38388
+      State = cbUnchecked
+      TabOrder = 3
+    end
+    object cbstorage: TComboBox
+      Left = 546
+      Top = 17
+      Width = 111
+      Height = 25
+      BevelKind = bkFlat
+      Ctl3D = False
+      ItemHeight = 17
+      ParentCtl3D = False
+      TabOrder = 4
+    end
+    object chstorage: TCheckBox
+      Left = 495
+      Top = 20
+      Width = 45
+      Height = 17
+      Caption = #24215#21517
+      Checked = True
+      State = cbChecked
+      TabOrder = 5
+    end
+  end
+  object query: TADOQuery
+    Parameters = <>
+    Prepared = True
+    Left = 480
+    Top = 168
+  end
+  object ds: TDataSource
+    DataSet = query
+    Left = 272
+    Top = 216
+  end
+  object savedlg: TSaveDialog
+    Left = 720
+    Top = 248
+  end
+  object frx: TfrxReport
+    Version = '4.7.18'
+    DataSetName = 'frxDBDataset1'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = #39044#35774
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 41949.724789745400000000
+    ReportOptions.LastChange = 41955.683770925900000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      'begin'
+      ''
+      'end.')
+    StoreInDFM = False
+    Left = 576
+    Top = 168
+  end
+  object aqprint: TADOQuery
+    Active = True
+    ConnectionString = 
+      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
+      'fo=False;Initial Catalog=leshan;Data Source=KEVIN-PC'
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      ''
+      'declare @starttime varchar(10)'
+      'declare @endtime varchar(10)'
+      'declare @stgid  int'
+      'set @stgid = 0'
+      'set @starttime='#39'2014-10-26'#39
+      'set @endtime='#39'2014-10-26'#39
+      ''
+      ''
+      
+        'select '#39#38646#21806#39' R0, sum(BS_RetailNoteHeader.TotalDiscountedprice) as' +
+        ' R1 , '
+      
+        '     sum(BS_RetailNoteHeader.TotalFixedprice) as R2,sum(BS_Retai' +
+        'lNoteHeader.Totalamount) as R3,sum((CASE WHEN dbo.BS_RetailNoteH' +
+        'eader.TotalDiscountedPrice > (RecCash + RecCardMoney) '
+      
+        'THEN (RecCash + RecCardMoney) ELSE dbo.BS_RetailNoteHeader.Total' +
+        'DiscountedPrice END)) as R4,0.0 R5'
+      ' from BS_RetailNoteHeader'#9'where '
+      #9' (@starttime is null or datediff(day,@starttime,HdTime) >= 0)'
+      #9'and (@endtime is null or datediff(day,@endtime,HdTime) <= 0)'
+      'union all '
+      '     '
+      
+        #9'select '#39#25209#38144#39' R0 ,sum(BS_WsaleNoteHeader.Checked) as R1 , sum(BS_' +
+        'WsaleNoteHeader.Nochecked) as R2,sum(BS_WsaleNoteHeader.totalamo' +
+        'unt) as R3,sum(BS_WsaleNoteHeader.discountedprice) as R4,'
+      'sum(BS_WsaleNoteHeader.fixedprice) as R5'
+      #9'FROM  BS_WsaleNoteHeader'
+      
+        #9'where (@starttime is null or datediff(day,@starttime,HdTime) >=' +
+        ' 0)'
+      #9'and (@endtime is null or datediff(day,@endtime,HdTime) <= 0)')
+    Left = 552
+    Top = 232
+  end
+  object frxdata: TfrxDBDataset
+    UserName = 'frxdata'
+    CloseDataSource = False
+    DataSet = aqprint
+    Left = 592
+    Top = 368
+  end
+end

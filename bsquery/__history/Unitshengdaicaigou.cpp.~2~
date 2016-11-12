@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unitshengdaicaigou.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+Tfrmshengdaicaigou *frmshengdaicaigou;
+//---------------------------------------------------------------------------
+__fastcall Tfrmshengdaicaigou::Tfrmshengdaicaigou(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
